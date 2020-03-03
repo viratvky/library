@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>NEW USERS</title>
+<style>
+body{
+background-image:url("static/image/books_for_all.jpg");
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+.d1{
+position:absolute;
+border:2px solid red;
+border-radius:15px;
+top:10%;
+left:20%;
+width:800px;
+height:100px;
+background:rgba(0,0,0,.9);
+}
+
+.h1{
+font-size:40px;
+text-align:center;
+color:orange;
+}
+
+.d2{
+position:absolute;
+border:2px solid red;
+border-radius:15px;
+top:27%;
+left:20%;
+width:800px;
+height:300px;
+background:rgba(0,0,0,.9);
+}
+
+.t1{
+font-size:25px;
+text-align:center;
+}
+
+table{
+width:100%;
+height:100%;
+}
+
+.d3{
+position:absolute;
+border:2px solid red;
+border-radius:15px;
+top:72%;
+left:20%;
+width:800px;
+height:100px;
+background:rgba(0,0,0,.9);
+}
+
+.i1{
+position:absolute;
+top:25%;
+left:20%;
+border:2px solid orange;
+border-radius:15px;
+height:50px;
+width:120px;
+}
+
+.i2{
+position:absolute;
+top:25%;
+right:20%;
+border:2px solid orange;
+border-radius:15px;
+height:50px;
+width:120px;
+}
+
+td{
+text-align:center;
+}
+
+input[type=number],input[type=text],input[type=password]{
+height:35px;
+width:75%;
+}
+
+</style>
+<body>
+<form action="/new_user" method="POST">
+<div class="d1">
+<h1 class="h1">NEW USER DETAILS</h1>
+</div>
+<div class="d2">
+<table>
+<tr>
+<td class="t1">Name:</td>
+<td><input type="text" name="name" required></td>
+</tr>
+<tr>
+<td class="t1">Password:</td>
+<td><input type="password" name="password" required minlength="8"></td>
+</tr>
+<tr>
+<td class="t1">Roll-NO:</td>
+<td><input type="text" name="rollno" minlength="6" maxlength="6" required></td>
+</tr>
+<tr>
+<td class="t1">Department:</td>
+<td><input type="text" name="dept" required></td>
+</tr>
+<tr>
+<td class="t1">Phone-Number:</td>
+<td><input type="text" name="phone_no" minlength="10" maxlength="10" required></td>
+</tr>
+</table>
+</div>
+<div class="d3">
+<input type="submit" class="i1" value="CREATE" name="option">
+<input type="submit" class="i2" value="BACK" name="option">
+</div>
+</form>
+</body>
+</html>

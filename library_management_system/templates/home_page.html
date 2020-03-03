@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>HOME PAGE</title>
+<style>
+body{
+background-image:url("static/image/books_9.jpg");
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+.d1{
+position:absolute;
+margin:0;
+border-radius:15px;
+width:600px;
+}
+
+.h1{
+font-size:50px;
+color:red;
+}
+
+.d2{
+position:absolute;
+border-left:15px solid grey;
+height:400px;
+width:700px;
+}
+
+.b1{
+position:absolute;
+top:10%;
+left:15px;
+width:250px;
+height:75px;
+background:transparent;
+border:5px solid red;
+border-radius:15px;
+font-size:25px;
+font-weight:bold;
+}
+
+.b1:hover{
+background:rgba(100%,0%,0%,0.5);
+}
+
+.b2{
+position:absolute;
+top:40%;
+left:15px;
+width:250px;
+height:75px;
+background:transparent;
+border:5px solid blue;
+border-radius:15px;
+font-size:25px;
+font-weight:bold;
+}
+
+
+.b2:hover{
+background:rgba(0%,0%,100%,0.5);
+}
+
+.b3{
+position:absolute;
+top:70%;
+left:15px;
+width:250px;
+height:75px;
+background:transparent;
+border:5px solid green;
+border-radius:15px;
+font-size:25px;
+font-weight:bold;
+}
+
+
+.b3:hover{
+background:rgba(0%,100%,0%,0.5);
+}
+
+
+</style>
+<body>
+<form action="{{url_for('home_page',rollno=rollno)}}" method="POST">
+<div class="d1">
+<h1 class="h1">WELCOME {{user | upper}}!!!</h1>
+<hr style="border:2px solid orange;">
+<hr style="border:2px solid orange;">
+</div>
+<br><br><br><br><br><br><br><br><br>
+<div class="d2">
+<input class="b1" type="submit" value="BORROW BOOK" name="option"><br>
+<input class="b2" type="submit" value="RETURN BOOK" name="option"><br>
+<input class="b3" type="submit" value="VIEW RECORD" name="option">
+</div>
+</form>
+</body>
+</html>
